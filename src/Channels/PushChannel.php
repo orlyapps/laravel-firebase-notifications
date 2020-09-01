@@ -68,7 +68,7 @@ class PushChannel
 
         $message = $message->withWebPushConfig(WebPushConfig::fromArray([
             'notification' => [
-                'icon' => 'https://ywc-beta.web.app/assets/icons/icon-72x72.png',
+                'icon' => 'https://laravel.test/assets/icons/icon-72x72.png',
             ],
             'fcm_options' => [
                 'link' => $url
