@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^7.4",
-        "illuminate/support": "^7.0",
+        "illuminate/support": "^8.0",
         "kreait/firebase-php": "^5.0"
     },
     "require-dev": {
