@@ -13,6 +13,11 @@ composer require orlyapps/laravel-firebase-notifications
 php artisan migrate
 ```
 
+### To generate a private key file for your service account:
+1. In the Firebase console, open Settings> Service Accounts (Dienstkonten) .
+2. Click Generate New Private Key and confirm by clicking Generate Key.
+3. Save the JSON file with the key securely.
+
 ```php
 // User.php
 class User extends Authenticatable
