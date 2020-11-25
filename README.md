@@ -56,6 +56,13 @@ fetch("http://laravel.test/api/push-token", {
  \App\User::find(1)->notify(new TextNotification('test', 'body', 'https://orlyapps.de'));
 ```
 
+## Usage Angular App
+
+```
+npm install firebase @angular/fire -save
+
+```
+
 ### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
