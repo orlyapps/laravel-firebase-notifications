@@ -7,6 +7,7 @@ use Kreait\Firebase;
 use Kreait\Firebase\Exception\Messaging\InvalidMessage;
 use Kreait\Firebase\Exception\Messaging\NotFound;
 use Kreait\Firebase\Exception\MessagingException;
+use Kreait\Firebase\Messaging\AndroidConfig;
 use Kreait\Firebase\Messaging\ApnsConfig;
 use Kreait\Firebase\Messaging\CloudMessage;
 use Kreait\Firebase\Messaging\WebPushConfig;
@@ -65,10 +66,12 @@ class PushChannel
                 'url' => $url
             ]),
         ]);
-
+        $message = $message->withAndroidConfig(AndroidConfig::fromArray([
+            'priority' => 'high',
+        ]));
         $message = $message->withWebPushConfig(WebPushConfig::fromArray([
             'notification' => [
-                'icon' => 'https://laravel.test/assets/icons/icon-72x72.png',
+                'icon' => 'https://meintouchtomorrow.de/assets/icons/apple-icon-72x72-dunplab-manifest-15615.png',
             ],
             'fcm_options' => [
                 'link' => $url
