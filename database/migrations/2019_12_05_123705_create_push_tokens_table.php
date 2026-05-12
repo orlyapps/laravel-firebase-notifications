@@ -4,14 +4,9 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePushTokensTable extends Migration
+return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
+    public function up(): void
     {
         Schema::create('push_tokens', function (Blueprint $table) {
             $table->bigIncrements('id');
@@ -21,18 +16,10 @@ class CreatePushTokensTable extends Migration
             $table->enum('type', ['web', 'ios', 'android'])->nullable();
             $table->timestamps();
         });
-
-        Schema::table('push_tokens', function ($table) {
-        });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('push_tokens');
     }
-}
+};
