@@ -1,5 +1,12 @@
 # Changelog
 
+## 5.0.0 - 2026-07-13
+
+### Added
+- Support for Laravel 13 (`illuminate/support` ^13.0).
+- Support for Orchestra Testbench 11 and PHPUnit 12.
+- GitHub Actions test matrix entries for Laravel 13 on PHP 8.3 and 8.4.
+
 ## 4.0.0 - 2026-05-12
 
 ### Added
